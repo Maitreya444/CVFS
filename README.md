@@ -22,14 +22,14 @@
        It is a linked list of INODES, INODE is considered as a structure which contains the information about the file.
        For every file there is a seperate INODE, OS will access the file by considering the contents stored inside an INODE.
        INODE contains below things in it :
-       a. INODE number
-       b. Name of file
-       c. Size of file (Allocated memory)
-       d. Actual size of file (size of data)
-       e. Permissions of file
-       f. Last access and modification time
-       g. Link count
-       h. Block number allocated to the file, etc.
+       1. INODE number
+       2. Name of file
+       3. Size of file (Allocated memory)
+       4. Actual size of file (size of data)
+       5. Permissions of file
+       6. Last access and modification time
+       7. Link count
+       8. Block number allocated to the file, etc.
      4. Data Block :
         This is one of the biggest section in a file system.
         The data block contains actual data that we store inside the file.
