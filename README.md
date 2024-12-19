@@ -37,3 +37,16 @@
         Inside the data block there is no information about the file.
         This concept of filesystem is applicable in any type of OS.
         All the above information is related to hardisk only.
+5. Data Structures of File systems from RAM :
+   1. UAREA :
+      It is called as user area for every running process seprate UAREA gets created.
+   2. UFDT (User File Descriptor Table) :
+      It is considered as array of pointers which points to the entries from the file table.
+      In UFDT first 3 entries are reserved one for stdout, one for stdin, one for stderror.
+   3. File Table :
+      This table contains the information about the opened files. This table contains the offset from where we can read or write, it contains mode in which file is 
+      opened, it contains field name as count, which is assosiated with new process creation, it contains a pointer which points to IIT.
+   4. Incore INODE table (IIT) :
+      This table holds all such INODES whose files are opened by the running processes.
+      The actual INODES are stored in DILB but when any process opens a file, the INODE of that file gets loaded into the RAM and it gets stored inside IIT.
+      The INODE from IIT contains the information like name of file, its INODE number, size of file, actual size, reference count, block number from data block etc. 
